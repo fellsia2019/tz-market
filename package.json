@@ -1,0 +1,31 @@
+{
+  "name": "market",
+  "version": "1.0.0",
+  "description": "Desc",
+  "author": "ar69tem",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.4.0",
+    "vue-imask": "^6.1.0"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "node-sass": "^4.14.1",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.3.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "semi": false,
+    "useTabs": false
+  }
+}

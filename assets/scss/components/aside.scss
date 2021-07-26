@@ -1,0 +1,85 @@
+.aside {
+  width: 100%;
+  max-width: 180px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (max-width: $smTableWidth) {
+    max-width: unset;
+  }
+  // .aside__title
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  // .aside__list
+  &__list {
+    @media (max-width: $smTableWidth) {
+      display: flex;
+      white-space: nowrap;
+      margin-bottom: 24px;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      @include scrollBarOff;
+    }
+    // .aside__list-item
+    &-item {
+      margin-bottom: 16px;
+      @media (max-width: $smTableWidth) {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    // .aside__list-input
+    &-input {
+      display: none;
+      &:checked {
+        & + .aside__list-lable {
+          color: $dark-main-color;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $dark-main-color;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    // .aside__list-lable
+    &-lable {
+      cursor: pointer;
+      position: relative;
+      text-align: left;
+      display: inline-block;
+      user-select: none;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $dark-main-color;
+        max-width: 0;
+        @include anim_defoult;
+      }
+      &:hover {
+        color: $gray-color;
+      }
+
+      @include anim_defoult;
+
+      // .aside__list-link--active
+      &--active {
+      }
+    }
+  }
+}

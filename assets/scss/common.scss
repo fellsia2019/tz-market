@@ -1,0 +1,16 @@
+// обновленные стандартные стили
+
+// Текст, заголовки и др элементы контента
+@import "common/fonts-style";
+// Контролы
+@import "common/controls";
+// Линки
+@import "common/link";
+// Кнопки
+@import "common/buttons";
+// Меню
+@import "common/navbar";
+// Статус
+@import "common/status";
+// Стили SVG иконок при инлайн подключении
+@import "common/svg";

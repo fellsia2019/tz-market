@@ -1,0 +1,13 @@
+.market {
+  max-width: calc(100% - 180px);
+  width: 100%;
+  flex: calc(100% - 180px);
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (max-width: $smTableWidth) {
+    max-width: unset;
+  }
+  // .market__list
+  &__list {
+  }
+}

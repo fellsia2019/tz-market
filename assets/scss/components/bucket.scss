@@ -1,0 +1,175 @@
+.bucket {
+  display: flex;
+  // .bucket__btn
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    @include anim_defoult;
+    &:hover {
+      .bucket__btn-score {
+        background-color: $danger-color;
+      }
+      .bucket__btn-svg {
+        fill: $secondary-color;
+      }
+    }
+    // .bucket__btn-score
+    &-score {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $secondary-color;
+      font-family: 'PT Sans';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 8px;
+      line-height: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: $default-color;
+      @include anim_defoult;
+    }
+  }
+
+  // .bucket-window
+  &-window {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($default-color, 0.8);
+    display: flex;
+    justify-content: flex-end;
+    // .bucket-window__wrapper
+    &__wrapper {
+      width: 100%;
+      height: 100%;
+      max-width: 460px;
+      margin-left: auto;
+      padding: 52px 48px;
+      box-shadow: -4px 0px 16px rgba(0, 0, 0, 0.05);
+      border-radius: 8px 0px 0px 8px;
+      background-color: $default-color;
+      position: relative;
+      @media (max-width: $desktopWidth) {
+        padding: 30px;
+      }
+      @media (max-width: $tableWidth) {
+        padding: 10px 15px;
+      }
+      @media (max-width: $phoneWidth) {
+        max-width: 100%;
+      }
+    }
+    // .bucket-window__content
+    &__content {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      @include scrollBarOff;
+    }
+
+    // .bucket-window__header
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    // .bucket-window__body
+    &__body {
+      // .bucket-window__body-list
+      &-list {
+      }
+      // .bucket-window__body-title
+      &-title {
+        margin-bottom: 24px;
+      }
+      // .bucket-window__body-txt
+      &-txt {
+        margin-bottom: 16px;
+      }
+    }
+
+    // .bucket-window__sended
+    &__sended {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+
+      // .bucket-window__sended-img
+      &-img {
+        margin: 0 auto;
+        margin-bottom: 24px;
+        width: 80px;
+      }
+
+      // .bucket-window__sended-title
+      &-title {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  // .bucket-list
+  &-list {
+    margin-bottom: 32px;
+    // .bucket-list__item
+    &__item {
+      display: flex;
+      width: 100%;
+      padding: 15px 16px 15px 25px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @media (max-width: $phoneWidth) {
+        padding: 10px;
+      }
+      // .bucket-list__item-delete
+      &-delete {
+        margin-left: auto;
+      }
+      // .bucket-list__item-img
+      &-img {
+        width: 70px;
+        height: 90px;
+        object-fit: cover;
+        object-position: center;
+        margin-right: 35px;
+        @media (max-width: $phoneWidth) {
+          margin-right: 15px;
+        }
+      }
+
+      // .bucket-list__item-info
+      &-info {
+        display: flex;
+        flex-direction: column;
+      }
+      // .bucket-list__item-name
+      &-name {
+        margin-bottom: 6px;
+      }
+      // .bucket-list__item-rating
+      &-rating {
+        margin-top: auto;
+      }
+    }
+  }
+}

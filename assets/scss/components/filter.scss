@@ -1,0 +1,88 @@
+.filter {
+  position: relative;
+
+  // .filter--active
+  &--active {
+    .filter__window {
+      opacity: 1;
+      max-height: 100px;
+    }
+  }
+  // .filter__current
+  &__current {
+    display: inline-flex;
+    align-items: center;
+    // .filter__current-btn
+    &-btn {
+      cursor: pointer;
+      padding-right: 10px;
+
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 5px;
+        height: 5px;
+        background-position: center;
+        background-size: 100%;
+        border: 3px solid transparent;
+        border-top: 3px solid $gray-color;
+        @include anim_defoult;
+      }
+      // .filter__current-btn--filter-opened
+      &--filter-opened {
+        &::after {
+          top: 5px;
+          border: 3px solid transparent;
+          border-bottom: 3px solid $gray-color;
+        }
+      }
+    }
+
+    // .filter__current-txt
+    &-txt {
+      margin-right: 5px;
+    }
+  }
+  // .filter__window
+  &__window {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    width: 100%;
+    // max-height: 0;
+    overflow: hidden;
+    // opacity: 0;
+    padding: 8px 0;
+    background: $default-color;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    @include anim_defoult;
+    z-index: 10;
+
+    // .filter__window-input
+    &-input {
+      &:checked {
+        & + .filter__window-label {
+          color: $dark-main-color;
+        }
+      }
+    }
+    // .filter__window-label
+    &-label {
+      width: 100%;
+      display: block;
+      text-align: left;
+      padding: 4px 12px;
+      margin: 0;
+      cursor: pointer;
+      @include anim_defoult;
+
+      &:hover {
+        background: $light-color;
+      }
+    }
+  }
+}

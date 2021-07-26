@@ -1,0 +1,33 @@
+.input {
+  width: 100%;
+  height: 50px;
+  padding: 14px;
+  background: $light-color;
+  border-radius: 8px;
+  border: 1px solid $light-color;
+  &::placeholder {
+    color: $secondary-color;
+    opacity: 1;
+  }
+
+  // .input--error
+  &--error {
+    border-color: $danger-color;
+  }
+}
+.radio-btn {
+  // .radio-btn__inp
+  &__inp {
+    display: none;
+    &:checked + .radio-btn__label {
+      svg {
+        fill: $dark-main-color;
+      }
+    }
+  }
+  // ..radio-btn__label
+  &__label {
+    cursor: pointer;
+    user-select: none;
+  }
+}

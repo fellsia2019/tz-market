@@ -1,0 +1,99 @@
+@mixin scrollBarOff {
+  &::-webkit-scrollbar-button {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 0;
+    height: 0;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-resizer {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  scrollbar-width: none;
+}
+@mixin anim_defoult {
+  transition: all 0.5s ease;
+}
+@mixin flexRow {
+  display: flex;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-top: -8px;
+  margin-bottom: -8px;
+  flex-wrap: wrap;
+}
+@mixin flexCol {
+  width: 100%;
+  flex: 100%;
+  max-width: 100%;
+  padding: 8px;
+}
+@mixin flexCol-33 {
+  flex: calc(100% / 3);
+  max-width: calc(100% / 3);
+  width: 100%;
+  padding: 8px;
+  @media (max-width: $smTableWidth) {
+    flex: 50%;
+    max-width: 50%;
+  }
+  @media (max-width: $phoneWidth) {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@mixin flexCol-50 {
+  flex: calc(100% / 2);
+  max-width: calc(100% / 2);
+  width: 100%;
+  padding: 8px;
+  @media (max-width: $smTableWidth) {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@mixin flexCol-25 {
+  flex: 25%;
+  max-width: 25%;
+  width: 100%;
+  padding: 8px;
+  @media (max-width: $desktopWidth) {
+    flex: calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+  @media (max-width: $smDesktopWidth) {
+    flex: calc(100% / 2);
+    max-width: calc(100% / 2);
+  }
+  @media (max-width: $phoneWidth) {
+    flex: unset;
+    max-width: unset;
+  }
+}
+@mixin flexCol-75 {
+  flex: 75%;
+  max-width: 75%;
+  width: 100%;
+  padding: 8px;
+  @media (max-width: $smTableWidth) {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

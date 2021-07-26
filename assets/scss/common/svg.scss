@@ -1,0 +1,49 @@
+.bucket-svg {
+  @include anim_defoult;
+  cursor: pointer;
+  // .bucket-svg--dark
+  &--dark {
+    fill: $dark-main-color;
+  }
+  // .bucket-svg--gray
+  &--gray {
+    fill: $secondary-color;
+    &:hover {
+      fill: $dark-main-color;
+    }
+  }
+  // .bucket-svg--sm
+  &--sm {
+    width: 16px;
+    height: 16px;
+  }
+  // .bucket-svg--md
+  &--md {
+    width: 32px;
+    height: 32px;
+  }
+}
+.star-svg {
+  width: 20px;
+  height: 20px;
+  @include anim_defoult;
+}
+.close-svg {
+  width: 24px;
+  height: 24px;
+  @include anim_defoult;
+  cursor: pointer;
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+.delete-svg {
+  width: 32px;
+  height: 32px;
+  @include anim_defoult;
+  cursor: pointer;
+  fill: $secondary-color;
+  &:hover {
+    fill: $dark-main-color;
+  }
+}

@@ -1,0 +1,14 @@
+@import 'mixins';
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('/fonts/PT-sans/ptsans.ttf') format('truetype'),
+    url('/fonts/PT-sans/ptsans.woff2') format('woff'),
+    url('/fonts/PT-sans/ptsans.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: url('/fonts/PT-sans/ptsansbold.ttf') format('truetype'),
+    url('/fonts/PT-sans/ptsansbold.woff2') format('woff'),
+    url('/fonts/PT-sans/ptsansbold.woff2') format('woff2');
+}

@@ -1,0 +1,20 @@
+.form-offer {
+  // .form-offer__caption
+  &__caption {
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  // .form-offer__field
+  &__field {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // .form-offer__submit
+  &__submit {
+    margin-top: 24px;
+  }
+}

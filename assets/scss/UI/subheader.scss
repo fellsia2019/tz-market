@@ -1,0 +1,23 @@
+.subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  @media (max-width: $smTableWidth) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  // .subheader__title
+  &__title {
+    @media (max-width: $smTableWidth) {
+      order: 1;
+    }
+  }
+  // .subheader__filter
+  &__filter {
+    @media (max-width: $smTableWidth) {
+      order: 0;
+    }
+  }
+}

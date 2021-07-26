@@ -1,0 +1,26 @@
+// utils
+@import 'utils/vars';
+@import 'utils/reset';
+@import 'utils/mixins.scss';
+@import 'utils/anim.scss';
+@import 'utils/fonts.scss';
+
+// Стили контейнера и враперов
+@import 'utils/container.scss';
+
+// Commin
+@import './common.scss';
+
+// UI
+@import 'UI/header.scss';
+@import 'UI/subheader.scss';
+
+// components
+@import 'components/bucket.scss';
+@import 'components/filter.scss';
+@import 'components/aside.scss';
+@import 'components/market.scss';
+@import 'components/product.scss';
+@import 'components/rating.scss';
+@import 'components/form-offer.scss';
+@import 'components/paging.scss';

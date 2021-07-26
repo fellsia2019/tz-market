@@ -1,0 +1,96 @@
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $neutral-primary;
+
+  height: 100%;
+  background-color: $default-color;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px;
+  @media (max-width: $smTableWidth) {
+    display: block;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  // .wrapper-main
+  &-main {
+    padding-top: 90px;
+    background-color: $default-color;
+    @media (max-width: $smDesktopWidth) {
+      padding-top: 60px;
+    }
+  }
+
+  // .wrapper-header
+  &-header {
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 8px 8px;
+  }
+  // .wrapper-content
+  &-content {
+  }
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 100px;
+  @media screen and (max-width: $lgDesktopWidth) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 0 20px;
+  }
+}
+.flex-rov {
+  @include flexRow;
+}
+.flex-col {
+  @include flexCol;
+}
+.flex-col-33 {
+  @include flexCol-33;
+}
+.flex-col-50 {
+  @include flexCol-50;
+}
+.flex-col-25 {
+  @include flexCol-25;
+}
+.flex-col-75 {
+  @include flexCol-75;
+}
+
+// --------------------

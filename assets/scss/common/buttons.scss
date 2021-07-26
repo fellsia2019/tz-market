@@ -1,0 +1,21 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  @include anim_defoult;
+  width: 100%;
+  padding: 14px;
+  height: 50px;
+  cursor: pointer;
+  user-select: none;
+  // .btn-dark
+  &-dark {
+    background-color: $dark-main-color;
+    color: $default-color;
+    &:hover {
+      background-color: $gray-color;
+    }
+  }
+}
